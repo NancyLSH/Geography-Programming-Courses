@@ -1,18 +1,13 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue May  4 01:01:52 2021
-
-@author: ASUS
-"""
 import random
 
 class Agent:
     def __init__(self, environment, agents, y, x):
-        if (x == None):
+        if (x is None):
             self.x = random.randint(0,100)
         else:
             self.x = x
-        if (y == None):
+        if (y is None):
             self.y = random.randint(0,100)
         else:
             self.y = y
@@ -44,7 +39,6 @@ class Agent:
                 ave = sum /2
                 self.store = ave
                 agent.store = ave
-                # print("sharing " + str(dist) + " " + str(ave))
 
     def distance_between(self, agent):
         return (((self.x - agent.x)**2) + ((self.y - agent.y)**2))**0.5
